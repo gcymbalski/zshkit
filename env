@@ -1,7 +1,2 @@
-if [[ $SHLVL < 3 ]]; then
-	mydir=`dirname $0`
+#Put things you need in every zsh session (but not interaction-specific ones) in here.
 
-	for f in $mydir/??_*; do
-		source $f
-	done
-fi
