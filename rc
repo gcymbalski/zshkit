@@ -8,7 +8,9 @@ compinit
 
 autoload -Uz colors
 
-colorsif [[ $SHLVL < 3 ]]; then
+colors
+
+if [[ $SHLVL < 3 ]]; then
 	mydir=`dirname $0`
 
 	for f in $mydir/??_*; do
