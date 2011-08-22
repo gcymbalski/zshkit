@@ -1,0 +1,2 @@
+#Support for a ~/.bin directory with binaries we want access to
+path=(~/.bin $path)
