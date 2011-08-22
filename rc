@@ -1,7 +1,17 @@
+#Put things you need in interactive sessions in here.
+#If you need a similarly-modular structure for non-interactive sessions, this
+#  should give you everything you need to know.  Maybe prefix such scripts with env_ .
 zstyle ':completion:*' completer _expand _complete
 
 autoload -Uz compinit
 compinit
 
 autoload -Uz colors
-colors
+
+colorsif [[ $SHLVL < 3 ]]; then
+	mydir=`dirname $0`
+
+	for f in $mydir/??_*; do
+		source $f
+	done
+fi
